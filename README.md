@@ -21,32 +21,6 @@
 >
 > ➠ [An example of running test in Selenoid](#-an-example-of-running-test-in-selenoid)
 
-[//]: # (> ➠ [Api сервис Dummy]&#40;#api-сервис-dummy&#41;)
-
-[//]: # (>)
-
-[//]: # (> ➠ [Покрытый функционал api сервиса Dummy]&#40;#покрытый-функционал-api-сервиса-dummy&#41;)
-
-[//]: # (>)
-
-[//]: # (> ➠ [Технологический стек API]&#40;#технологический-стек-api&#41;)
-
-[//]: # (>)
-
-[//]: # (> ➠ [Мобильное приложение Ozon]&#40;#мобильное-приложение-ozon&#41;)
-
-[//]: # (>)
-
-[//]: # (> ➠ [Покрытый функционал мобильного приложения Ozon]&#40;#покрытый-функционал-мобильного-приложения-ozon&#41;)
-
-[//]: # (>)
-
-[//]: # (> ➠ [Технологический стек Mobile]&#40;#технологический-стек-mobile&#41;)
-
-[//]: # (>)
-
-[//]: # (> ➠ [Пример запуска теста в Browserstack]&#40;#-пример-запуска-теста-в-browserstack&#41;)
-
 ##  Project general information
 
 ### Launching tests from a terminal
@@ -67,45 +41,25 @@ gradle clean test
 
 #### Description of parameters for running tests
 
-> -Dtag <code>test tag to run</code>
+> <code>-Dtag</code> test tag to run
 >
-> -Dthreads <code>number of threads to run the tests</code>
+> <code>-Dthreads</code> number of threads to run the tests
 >
-> -DwebBrowserName <code>browser name</code>
+> <code>-DbrowserName</code> browser name
 >
-> -DwebBrowserVersion <code>browser version</code>
+> <code>-DbrowserVersion</code> browser version
 >
-> -webBaseUrl <code>url of the testing stand</code>
+> <code>-DbaseUrl</code> url of the testing stand
 >
-> -DwebBrowserSize <code>browser resolution</code>
+> <code>-DbrowserSize</code> browser resolution
 >
-> -DwebPageLoadTimeout <code>page load timeout</code>
+> <code>-DpageLoadTimeout</code> page load timeout
 >
-> -DwebTimeout <code>timeout for loading the page element</code>
+> <code>-DelementTimeout</code> timeout for loading the page element
 >
-> -DwebIsRemote <code>running tests locally or via a remote service</code>
+> <code>-DisRemote</code> running tests locally or via a remote service
 >
-> -DwebRemoteUrl <code>url of the remote service</code>
-
-[//]: # (>)
-
-[//]: # (> -DmobilePlatform <code>выбор платформы для запуска мобильных тестов&#40;локально или в Browserstack&#41;</code>)
-
-[//]: # (>)
-
-[//]: # (> -DbuildName <code>имя билда, используется для опознования запущенного билда в browserstack</code>)
-
-[//]: # (>)
-
-[//]: # (> -DandroidVersion <code>версия android для browserstack</code>)
-
-[//]: # (>)
-
-[//]: # (> -DandroidDevice <code>имя android девайса для browserstack</code>)
-
-[//]: # (>)
-
-[//]: # (> -DandroidApp <code>идентификатор приложения, загруженного в browserstack</code>)
+> <code>-DremoteUrl</code> url of the remote service
 
 ### Remote launch of tests
 
@@ -233,107 +187,3 @@ remoteUrl=https://selenoid.autotests.cloud
 [//]: # (<img title="Selenoid_gif" src="images/gifs/Selenoid.gif">)
 [//]: # (</p>)
 
-[//]: # (##  Api сервис Dummy)
-[//]: # ()
-[//]: # (###  Покрытый функционал api сервиса Dummy)
-[//]: # ()
-[//]: # (> Разработаны автотесты на <code>Api сервис</code>.)
-[//]: # (### Api)
-[//]: # ()
-[//]: # (- [x] Получение списка пользователей)
-[//]: # (- [x] Создание нового пользователя)
-[//]: # (- [x] Изменение пользователя)
-[//]: # (- [x] Удаление пользователя)
-[//]: # (- [x] Получение списка постов)
-[//]: # (- [x] Создание нового поста)
-[//]: # (- [x] Изменение поста)
-[//]: # (- [x] Удаление поста)
-[//]: # (- [x] Проверка всех постов пользователя)
-[//]: # (- [x] Получение постов по тегу)
-[//]: # (- [x] Получение списка коментов)
-[//]: # (- [x] Добавление комента к посту)
-[//]: # (- [x] Получение списка коментов пользователя)
-[//]: # (- [x] Удаление комента)
-[//]: # ()
-[//]: # (### Технологический стек API)
-[//]: # ()
-[//]: # (<p align="center">)
-[//]: # (<img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">)
-[//]: # (<img width="6%" title="Java" src="images/logo/Java.svg">)
-[//]: # (<img width="6%" title="Rest Assured" src="images/logo/Rest_Assured.png">)
-[//]: # (<img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">)
-[//]: # (<img width="6%" title="Allure Test Ops" src="images/logo/Allure_Test_Ops.svg">)
-[//]: # (<img width="6%" title="Gradle" src="images/logo/Gradle.svg">)
-[//]: # (<img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">)
-[//]: # (<img width="6%" title="GitHub" src="images/logo/GitHub.svg">)
-[//]: # (<img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">)
-[//]: # (<img width="6%" title="Telegram" src="images/logo/Telegram.svg">)
-[//]: # (</p>)
-[//]: # ()
-[//]: # (### В данном подпроекте автотесты написаны на <code>Java</code> с использованием <code>Rest Assured</code> для Api-тестов.)
-[//]: # (>)
-[//]: # (> <code>Rest Assured</code> выполняет роль обёртки над http клиентом.)
-[//]: # (>)
-[//]: # (> <code>Allure Report</code> формирует отчет о запуске тестов.)
-[//]: # (>)
-[//]: # (> Для автоматизированной сборки проекта используется <code>Gradle</code>.)
-[//]: # (>)
-[//]: # (> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.)
-[//]: # (>)
-[//]: # (> <code>Jenkins</code> выполняет запуск тестов.)
-[//]: # (>)
-[//]: # (> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.)
-[//]: # ()
-[//]: # (## Мобильное приложение Ozon)
-[//]: # ()
-[//]: # (### Покрытый функционал мобильного приложения Ozon)
-[//]: # ()
-[//]: # (> Разработаны автотесты для мобильного приложения Ozon.)
-[//]: # ()
-[//]: # (- [x] Проверка страницы 'Корзина')
-[//]: # (- [x] Добавление товара в корзину)
-[//]: # (- [x] Проверка категорий на странице каталога)
-[//]: # (- [x] Изменение региона доставки)
-[//]: # (- [x] Проверка страницы 'Скидки')
-[//]: # (- [x] Поиск товара и добавление в корзину)
-[//]: # ()
-[//]: # (### Технологический стек Mobile)
-[//]: # ()
-[//]: # (<p align="center">)
-[//]: # (<img width="6%" title="Java" src="images/logo/java.svg">)
-[//]: # (<img width="6%" title="Selenide" src="images/logo/selenide.svg">)
-[//]: # (<img width="6%" title="Android Studio" src="images/logo/androidstudio.svg">)
-[//]: # (<img width="6%" title="Appium" src="images/logo/appium.svg">)
-[//]: # (<img width="6%" title="Appium Inspector" src="images/logo/appium_inspector.png">)
-[//]: # (<img width="6%" title="Browserstack" src="images/logo/browserstack.svg">)
-[//]: # (<img width="6%" title="Allure Report" src="images/logo/allureReport.svg">)
-[//]: # (<img width="6%" title="Allure Test Ops" src="images/logo/Allure_Test_Ops.svg">)
-[//]: # (<img width="6%" title="Gradle" src="images/logo/gradle.svg">)
-[//]: # (<img width="6%" title="JUnit5" src="images/logo/jUnit5.svg">)
-[//]: # (<img width="6%" title="GitHub" src="images/logo/gitHub.svg">)
-[//]: # (<img width="6%" title="Jenkins" src="images/logo/jenkins.svg">)
-[//]: # (</p>)
-[//]: # ()
-[//]: # (### В данном подпроекте автотесты написаны на <code>Java</code> с использованием <code>Selenide и Appium</code>.)
-[//]: # (>)
-[//]: # (> <code>Selenide и Appium</code> используются для управления мобильным устройством с помощью веб драйвера.)
-[//]: # (>)
-[//]: # (> Тесты можно запускать как локально&#40;с помощью Android studio и эмулятора мобильного устройства&#41;, так и с помощью сервиса Browserstack, предоставляющего доступ к ферме с реальными мобильными устройствами)
-[//]: # (>)
-[//]: # (> <code>Allure Report</code> формирует отчет о запуске тестов.)
-[//]: # (>)
-[//]: # (> Для автоматизированной сборки проекта используется <code>Gradle</code>.)
-[//]: # (>)
-[//]: # (> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.)
-[//]: # (>)
-[//]: # (> <code>Jenkins</code> выполняет запуск тестов.)
-[//]: # (>)
-[//]: # (> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.)
-[//]: # ()
-[//]: # (## <img width="4%" title="BrowserStack" src="images/logo/browserstack.svg"> Пример запуска теста в Browserstack)
-[//]: # ()
-[//]: # (> К каждому тесту в отчете прилагается видео и различные логи. Одно из таких видео представлено ниже.)
-[//]: # ()
-[//]: # (<p align="center">)
-[//]: # (<img title="Browserstack_gif" src="images/gifs/Browserstack_gif.gif">)
-[//]: # (</p></p>)
