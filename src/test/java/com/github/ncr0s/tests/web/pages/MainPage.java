@@ -18,8 +18,7 @@ public class MainPage {
     }
 
     @Step("Click on Log In button")
-    public MainPage clickOnSignInButton() {
+    public void clickOnSignInButton() {
         $("#log_in_link").click();
-        return this;
     }
 }

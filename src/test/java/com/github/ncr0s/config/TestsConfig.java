@@ -51,5 +51,11 @@ public class TestsConfig {
 
         @Key("timeout")
         Long getTimeout();
+
+        @Key("username")
+        String getUsername();
+
+        @Key("password")
+        String getPassword();
     }
 }

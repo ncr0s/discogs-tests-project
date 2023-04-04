@@ -4,9 +4,9 @@ import com.codeborne.selenide.SelenideElement;
 import com.github.ncr0s.tests.web.pages.components.GdprComponent;
 import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage {
 
@@ -14,6 +14,7 @@ public class LoginPage {
     SelenideElement usernameInput = $("#username");
     SelenideElement passwordInput = $("#password");
     SelenideElement logInButton = $(".btn-success");
+    SelenideElement loginErrorElement = $(".invalid-feedback");
 
     @Step("Log In page should be shown")
     public void loginFormShouldBeShown() {
@@ -35,14 +36,21 @@ public class LoginPage {
     }
 
     @Step("Press Log In button")
-    public LoginPage submit() {
+    public void submit() {
         logInButton.click();
-        return this;
     }
 
     @Step("Get started module should be shown")
     public void getStartedModuleShouldBeShown() {
         gdprComponent.rejectCookies();
         $(".get_started_module").shouldBe(visible);
+    }
+
+    @Step("Error message should be shown")
+    public void errorMessageShouldBeShown() {
+        gdprComponent.rejectCookies();
+        loginErrorElement
+            .shouldBe(visible)
+            .shouldHave(text("Invalid password"));
     }
 }
